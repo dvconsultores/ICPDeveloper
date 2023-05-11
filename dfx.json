@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "w3music_backend": {
+      "main": "src/w3music_backend/main.mo",
+      "type": "motoko"
+    },
+    "w3music_frontend": {
+      "dependencies": [
+        "w3music_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/w3music_frontend/src/index.html"
+      },
+      "source": [
+        "src/w3music_frontend/assets",
+        "dist/w3music_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
